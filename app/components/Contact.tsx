@@ -40,15 +40,23 @@ export default function Contact() {
     e.preventDefault()
     setIsSubmitting(true)
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 2000))
+    try {
+      await fetch("https://script.google.com/macros/s/AKfycbyA0bMdQLKnWwEltwyIU8ntXLwAn5ju9on6TIG7IWnkWLE6SGvZfgoTW2oTCCQGxYNFXg/exec", {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      })
 
-    setIsSubmitting(false)
-    setIsSubmitted(true)
-    setFormData({ name: "", email: "", message: "" })
-
-    // Reset success message after 5 seconds
-    setTimeout(() => setIsSubmitted(false), 5000)
+      setIsSubmitted(true)
+      setFormData({ name: "", email: "", message: "" })
+    } catch (error) {
+      console.error("Error submitting form", error)
+      alert("Oops! Something went wrong. Please try again later.")
+    } finally {
+      setIsSubmitting(false)
+      setTimeout(() => setIsSubmitted(false), 5000)
+    }
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
