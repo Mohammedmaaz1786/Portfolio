@@ -25,7 +25,7 @@ export default function Projects() {
     elements?.forEach((el) => observer.observe(el))
 
     return () => observer.disconnect()
-  }, [activeFilter]) // Add activeFilter as dependency
+  }, [activeFilter])
 
   const projects = [
     {
@@ -44,6 +44,23 @@ export default function Projects() {
       demo: "https://ieeexplore.ieee.org/document/10968328",
       demoVideo: "#",
       gradient: "from-red-500 to-orange-500",
+    },
+    {
+      title: "Intelligent Policy Document Query System",
+      description:
+        "State-of-the-art intelligent query system enabling accurate extraction and analysis of insurance policy documents (16+ pages) built for HackRx 2025.",
+      longDescription:
+        "Hybrid document processing pipeline with PyPDF2 and Azure OCR backup, FAISS vector search with Cross-Encoder reranking.",
+      technologies: ["Python", "FastAPI", "FAISS", "Azure Document Intelligence", "PyPDF2", "Sentence Transformers", "Gemini API"],
+      date: "Aug 2025",
+      status: "Completed",
+      category: "AI/ML",
+      labels: ["Featured", "HackRx Competition"],
+      achievements: ["100% Document Coverage", "60% Better Context Relevance", "Scalable Architecture"],
+      github: "https://github.com/Mohammedmaaz1786",
+      demo: "#",
+      demoVideo: "#",
+      gradient: "from-purple-500 to-indigo-500",
     },
     {
       title: "AI-powered LinkedIn Automation",
@@ -87,8 +104,9 @@ export default function Projects() {
     { id: "NLP", label: "NLP" },
   ]
 
-  const filteredProjects =
-    activeFilter === "all" ? projects : projects.filter((project) => project.category === activeFilter)
+  const filteredProjects = activeFilter === "all" 
+    ? projects.filter(project => project.labels.includes("Featured")) // Only show featured projects in "All"
+    : projects.filter((project) => project.category === activeFilter)
 
   return (
     <section id="projects" ref={sectionRef} className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-slate-800/50">
@@ -148,7 +166,9 @@ export default function Projects() {
                           ? "bg-yellow-100 text-yellow-800 dark:bg-yellow-900/20 dark:text-yellow-400"
                           : label === "Published in IEEE"
                             ? "bg-green-100 text-green-800 dark:bg-green-900/20 dark:text-green-400"
-                            : "bg-blue-100 text-blue-800 dark:bg-blue-900/20 dark:text-blue-400"
+                            : label === "HackRx Competition"
+                              ? "bg-orange-100 text-orange-800 dark:bg-orange-900/20 dark:text-orange-400"
+                              : "bg-blue-100 text-blue-800 dark:bg-blue-900/20 dark:text-blue-400"
                       }`}
                     >
                       {label === "Published in IEEE" && <Award className="w-3 h-3 mr-1" />}

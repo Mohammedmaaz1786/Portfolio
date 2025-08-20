@@ -12,7 +12,7 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: "Mohammed Maaz - AI/ML Engineer & Software Developer",
+  title: "Mohammed Maaz - AI/ML & Software Developer Undergraduate",
   description:
     "Aspiring AI & ML Engineer with expertise in deep learning, computer vision, and intelligent automation. Passionate about building innovative technology solutions.",
   keywords:
