@@ -86,7 +86,7 @@ export default function Hero() {
               className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
               asChild
             >
-              <a href="/resume.pdf" download="resume.pdf">
+              <a href="/resume (15).pdf" download="Mohammed_Maaz_Resume.pdf">
                 <Download className="mr-2 h-4 w-4" />
                 Download Resume
               </a>

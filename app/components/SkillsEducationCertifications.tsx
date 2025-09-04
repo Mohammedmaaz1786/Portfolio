@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect, useRef } from "react"
-import { Code, GraduationCap, Award, Calendar, MapPin, ExternalLink, Database, Globe, Cpu } from "lucide-react"
+import { Code, GraduationCap, Award, Calendar, MapPin, ExternalLink, Database, Globe, Cpu, Server, Brain, Eye, Monitor, Wrench, Cog, Cloud, BarChart } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 
@@ -29,39 +29,80 @@ export default function SkillsEducationCertifications() {
 
   const skillCategories = [
   {
-    title: "Programming & Development",
+    title: "Programming Languages",
     icon: Code,
     iconColor: "from-blue-500 to-purple-500",
     skills: ["Python", "Java", "C", "PHP", "JavaScript"],
   },
   {
+    title: "Backend Development",
+    icon: Server,
+    iconColor: "from-green-500 to-teal-500",
+    skills: ["Node.js", "Express.js", "FastAPI", "API Development"],
+  },
+  {
     title: "AI/ML & Deep Learning",
-    icon: Cpu,
-    iconColor: "from-blue-500 to-purple-500",
+    icon: Brain,
+    iconColor: "from-purple-500 to-pink-500",
     skills: [
       "TensorFlow",
-      "Keras",
+      "Keras", 
       "PyTorch",
-      "OpenCV",
-      "NLTK",
-      "Natural Language Processing",
-      "Computer Vision",
-      "Transfer Learning"
+      "3D CNNs",
+      "Transfer Learning",
+      "Scikit-learn"
     ],
   },
   {
-    title: "Web & UI Development",
-    icon: Globe,
-    iconColor: "from-blue-500 to-purple-500",
+    title: "Computer Vision & NLP",
+    icon: Eye,
+    iconColor: "from-orange-500 to-red-500",
+    skills: [
+      "OpenCV",
+      "NLTK",
+      "Computer Vision",
+      "Natural Language Processing",
+      "Sentence Transformers"
+    ],
+  },
+  {
+    title: "Frontend & UI Development",
+    icon: Monitor,
+    iconColor: "from-cyan-500 to-blue-500",
     skills: ["HTML", "CSS", "JavaScript", "React", "Streamlit", "Tkinter"],
   },
   {
-    title: "Databases & Tools",
+    title: "Databases & Storage",
     icon: Database,
-    iconColor: "from-blue-500 to-purple-500",
-    skills: ["MySQL", "MongoDB", "Git", "GitHub", "VS Code", "Jupyter Notebook"],
+    iconColor: "from-indigo-500 to-purple-500",
+    skills: ["MySQL", "MongoDB", "FAISS Vector Search"],
   },
+  {
+    title: "Development Tools",
+    icon: Wrench,
+    iconColor: "from-gray-500 to-slate-500",
+    skills: ["Git", "GitHub", "VS Code", "Jupyter Notebook", "Postman"],
+  },
+  {
+    title: "Automation & Testing",
+    icon: Cog,
+    iconColor: "from-yellow-500 to-orange-500",
+    skills: ["Selenium", "Web Automation", "API Testing"],
+  },
+  {
+    title: "Cloud & DevOps",
+    icon: Cloud,
+    iconColor: "from-sky-500 to-indigo-500",
+    skills: ["Docker", "Kubernetes", "Azure Document Intelligence"],
+  },
+  {
+    title: "Data Processing & Analysis",
+    icon: BarChart,
+    iconColor: "from-emerald-500 to-green-500",
+    skills: ["PyPDF2", "Data Structures & Algorithms", "TF-IDF", "Cross-Encoder Reranking"],
+  }
 ];
+
 
 
   const education = [
