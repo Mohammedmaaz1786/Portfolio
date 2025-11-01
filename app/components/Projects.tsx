@@ -29,77 +29,112 @@ export default function Projects() {
 
   const projects = [
     {
-      title: "Road Rage Detection System",
+      title: "Road Rage Detection using Deep Learning and Computer Vision",
       description:
-        "Real-time road rage detection using 3D CNNs with 5-frame temporal smoothing, achieving 94% accuracy on custom Indian dataset.",
+        "Real-time road rage detection system using 3D CNNs with 5-frame temporal smoothing, achieving 94% accuracy on a custom Indian dataset.",
       longDescription:
-        "Developed using deep learning and computer vision techniques with transfer learning optimization.",
+        "Reduced false positives by 15% through transfer learning, optimized for Bangalore traffic conditions. Deployed for traffic monitoring and insurance claim verification.",
       technologies: ["Python", "TensorFlow", "Keras", "OpenCV", "3D CNN", "Transfer Learning"],
       date: "Dec 2024",
       status: "Completed",
       category: "AI/ML",
       labels: ["Featured", "Published in IEEE"],
       achievements: ["94% Accuracy", "IEEE Publication", "15% False Positive Reduction"],
-      github: "https://github.com/Mohammedmaaz1786",
+      github: "https://github.com/Mohammedmaaz1786/Road-Rage-Detection",
       demo: "https://ieeexplore.ieee.org/document/10968328",
       demoVideo: "#",
       gradient: "from-red-500 to-orange-500",
     },
     {
-      title: "Intelligent Policy Document Query System",
+      title: "Intelligent Policy Document Query System (HackRx 2025)",
       description:
-        "State-of-the-art intelligent query system enabling accurate extraction and analysis of insurance policy documents (16+ pages) built for HackRx 2025.",
+        "State-of-the-art intelligent query system enabling accurate extraction and analysis of insurance policy documents (16+ pages) built for HackRx competition.",
       longDescription:
-        "Hybrid document processing pipeline with PyPDF2 and Azure OCR backup, FAISS vector search with Cross-Encoder reranking.",
+        "Hybrid document processing pipeline with PyPDF2 primary extraction and Azure OCR backup, improving coverage from 12.5% to 100%.",
       technologies: ["Python", "FastAPI", "FAISS", "Azure Document Intelligence", "PyPDF2", "Sentence Transformers", "Gemini API"],
       date: "Aug 2025",
       status: "Completed",
       category: "AI/ML",
       labels: ["Featured", "HackRx Competition"],
-      achievements: ["100% Document Coverage", "60% Better Context Relevance", "Scalable Architecture"],
-      github: "https://github.com/Mohammedmaaz1786",
+      achievements: ["100% Document Coverage", "60% Better Context Relevance", "Secure FastAPI Backend"],
+      github: "https://github.com/Mohammedmaaz1786/hackrx_query_system",
       demo: "#",
       demoVideo: "#",
       gradient: "from-purple-500 to-indigo-500",
     },
     {
-      title: "AI-powered LinkedIn Automation",
+      title: "AI-powered LinkedIn Automation Tool",
       description:
-        "Intelligent LinkedIn automation system with personalized messaging, connection requests, and auto-posting capabilities.",
-      longDescription: "Features Gemini-powered NLP for context-aware messaging and human-like interaction patterns.",
-      technologies: ["Python", "Selenium", "Gemini API", "NLP", "Tkinter", "HTML Parsing"],
+        "Tkinter-based automation system for LinkedIn enabling personalized connection requests, messaging, and auto-posting with user-friendly interface.",
+      longDescription: "Employs Gemini-powered NLP for intelligent, context-aware messaging and hashtag generation with compliance-focused design.",
+      technologies: ["Python", "Selenium", "Gemini API", "NLP", "HTML Parsing", "Tkinter"],
       date: "May 2025",
-      status: "In Development",
+      status: "Completed",
       category: "Automation",
       labels: ["Featured"],
-      achievements: ["Smart Targeting", "NLP Integration", "Compliance-First Design"],
-      github: "https://github.com/Mohammedmaaz1786",
+      achievements: ["Smart Targeting", "NLP Integration", "Human-like Interaction Delays"],
+      github: "https://github.com/Mohammedmaaz1786/LinkedIn_Automator",
       demo: "#",
       demoVideo: "#",
       gradient: "from-blue-500 to-purple-500",
     },
     {
+      title: "Audit Lens - Intelligent Invoice Processing System",
+      description:
+        "Full-stack intelligent auditing system for invoice processing and fraud detection with AI-powered OCR and ML-based anomaly detection.",
+      longDescription:
+        "Integrates multi-language document parsing (English, Spanish, French) using Tesseract + Gemini 2.0 Flash with Next.js dashboard.",
+      technologies: ["Next.js", "FastAPI", "Python", "TypeScript", "Tailwind CSS", "Google Gemini AI", "Scikit-learn", "OpenCV"],
+      date: "Under Development",
+      status: "In Development",
+      category: "Full-Stack",
+      labels: ["Featured"],
+      achievements: ["Multi-language OCR", "ML Fraud Detection", "Real-time Analytics"],
+      github: "https://github.com/Mohammedmaaz1786/AuditLens",
+      demo: "#",
+      demoVideo: "#",
+      gradient: "from-indigo-500 to-purple-500",
+    },
+    {
+      title: "Wanderlust – Hotel/Accommodation Booking Platform",
+      description:
+        "Full-stack accommodation booking system (Airbnb Clone) where users can register, log in, and browse available hotels with interactive features.",
+      longDescription:
+        "Implemented JWT authentication, Cloudinary image management, and interactive maps using Mapbox API.",
+      technologies: ["MERN Stack", "Mapbox API", "Cloudinary", "JWT Authentication"],
+      date: "Under Development",
+      status: "In Development",
+      category: "Full-Stack",
+      labels: ["Featured"],
+      achievements: ["JWT Authentication", "Image Management", "Interactive Maps"],
+      github: "https://github.com/Mohammedmaaz1786/Wanderlust",
+      demo: "#",
+      demoVideo: "#",
+      gradient: "from-green-500 to-teal-500",
+    },
+    {
       title: "Amazon Review Sentiment Analyzer",
       description:
-        "Streamlit-based sentiment analysis tool for Amazon product reviews using machine learning classification.",
+        "Streamlit-based sentiment analysis tool for Amazon reviews using TF-IDF and Random Forest classifier.",
       longDescription:
-        "Implements TF-IDF vectorization with Random Forest classifier for accurate sentiment prediction.",
+        "Implemented NLTK preprocessing (tokenization, stop words, lemmatization) for accurate real-time prediction.",
       technologies: ["Python", "Streamlit", "Scikit-learn", "NLTK", "TF-IDF", "Random Forest"],
       date: "Apr 2025",
       status: "Completed",
       category: "NLP",
       labels: [],
       achievements: ["Real-time Analysis", "Advanced Preprocessing", "Interactive UI"],
-      github: "https://github.com/Mohammedmaaz1786",
+      github: "https://github.com/Mohammedmaaz1786/Sentiment_Analysis",
       demo: "#",
       demoVideo: "#",
-      gradient: "from-green-500 to-teal-500",
+      gradient: "from-cyan-500 to-blue-500",
     },
   ]
 
   const filters = [
     { id: "all", label: "All Projects" },
     { id: "AI/ML", label: "AI/ML" },
+    { id: "Full-Stack", label: "Full-Stack" },
     { id: "Automation", label: "Automation" },
     { id: "NLP", label: "NLP" },
   ]
@@ -118,7 +153,7 @@ export default function Projects() {
             </span>
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-            Innovative AI/ML solutions that demonstrate technical expertise and real-world impact
+            Innovative AI/ML solutions and full-stack applications that demonstrate technical expertise and real-world impact
           </p>
         </div>
 
@@ -239,18 +274,6 @@ export default function Projects() {
                       Code
                     </a>
                   </Button>
-                  {project.demoVideo !== "#" && (
-                    <Button
-                      size="sm"
-                      className={`flex-1 bg-gradient-to-r ${project.gradient} hover:opacity-90 text-white`}
-                      asChild
-                    >
-                      <a href={project.demoVideo} target="_blank" rel="noopener noreferrer">
-                        <Play className="w-4 h-4 mr-1" />
-                        Demo
-                      </a>
-                    </Button>
-                  )}
                   {project.demo !== "#" && project.labels.includes("Published in IEEE") && (
                     <Button
                       size="sm"

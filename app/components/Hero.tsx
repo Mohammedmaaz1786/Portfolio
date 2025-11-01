@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { Download, ArrowDown } from "lucide-react"
+import { ExternalLink, ArrowDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export default function Hero() {
@@ -10,12 +10,15 @@ export default function Hero() {
   const [isDeleting, setIsDeleting] = useState(false)
 
   const roles = [
-  "Undergraduate Software Developer",
-  "AI/ML Enthusiast",
-  "Deep Learning Learner",
-  "Computer Vision Student",
-  "Aspiring Data Scientist",
-];
+    "Undergraduate Software Developer",
+    "AI/ML Enthusiast",
+    "MERN Stack Developer",
+    "Deep Learning Learner",
+    "Published Research Author",
+    "Aspiring Data Scientist",
+  ];
+
+
 
   useEffect(() => {
     const currentRole = roles[currentRoleIndex]
@@ -75,9 +78,26 @@ export default function Hero() {
               </span>
             </h1>
 
-            <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed">
-              Passionate about building intelligent systems with deep learning, computer vision, and innovative automation, while exploring full-stack web development with the MERN stack. Enthusiastic about turning complex problems into elegant AI solutions and creating impactful, user-friendly applications.
+            <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
+              Passionate Computer Science Engineering student building intelligent systems with deep learning and innovative automation, 
+              while mastering full-stack web development with the MERN stack. <span className="font-semibold text-gray-800 dark:text-gray-200">IEEE published author</span> enthusiastic 
+              about transforming complex problems into elegant AI solutions and creating impactful, user-friendly applications that make a difference.
             </p>
+
+
+            
+            {/* Key Achievements Highlight */}
+            {/* <div className="flex flex-wrap justify-center gap-3 text-sm">
+              <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded-full font-medium">
+                🎯 94% ML Model Accuracy
+              </span>
+              <span className="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-300 rounded-full font-medium">
+                📚 IEEE Published Paper
+              </span>
+              <span className="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 rounded-full font-medium">
+                🏆 9.35 CGPA
+              </span>
+            </div> */}
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -86,9 +106,13 @@ export default function Hero() {
               className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
               asChild
             >
-              <a href="/resume (15).pdf" download="Mohammed_Maaz_Resume.pdf">
-                <Download className="mr-2 h-4 w-4" />
-                Download Resume
+              <a 
+                href="https://drive.google.com/file/d/1VjcgcKfDenEoNKkXyF7iWRa7rXfwXuDV/view?usp=sharing" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <ExternalLink className="mr-2 h-4 w-4" />
+                View Resume
               </a>
             </Button>
 
@@ -98,7 +122,7 @@ export default function Hero() {
               size="lg"
               className="px-8 py-3 rounded-full font-semibold border-2 border-gray-300 dark:border-gray-600 hover:border-blue-500 dark:hover:border-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-all duration-300 bg-transparent"
             >
-              View Projects
+              Explore Projects
             </Button>
           </div>
         </div>

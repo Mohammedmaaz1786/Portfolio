@@ -3,7 +3,7 @@
 import type React from "react"
 
 import { useState, useEffect, useRef } from "react"
-import { Mail, Phone, MapPin, Github, Linkedin, Send, CheckCircle } from "lucide-react"
+import { Mail, Phone, MapPin, Github, Linkedin, Send, CheckCircle, FileText, Download } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -151,6 +151,31 @@ export default function Contact() {
                     </div>
                   </a>
                 ))}
+              </div>
+
+              {/* Resume Download Section */}
+              <div className="mb-8 p-4 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-xl border border-blue-200 dark:border-blue-800">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center">
+                    <div className="p-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg mr-3">
+                      <FileText className="h-5 w-5 text-white" />
+                    </div>
+                    <div>
+                      <p className="font-semibold text-gray-900 dark:text-white">Resume</p>
+                      <p className="text-sm text-gray-600 dark:text-gray-300">Download my complete profile</p>
+                    </div>
+                  </div>
+                  <Button
+                    size="sm"
+                    className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-medium shadow-md hover:shadow-lg transition-all duration-300"
+                    asChild
+                  >
+                    <a href="/resume (19).pdf" download="Mohammed_Maaz_Resume.pdf">
+                      <Download className="h-4 w-4 mr-1" />
+                      Download Resume
+                    </a>
+                  </Button>
+                </div>
               </div>
 
               <div className="border-t border-gray-200 dark:border-gray-600 pt-8">

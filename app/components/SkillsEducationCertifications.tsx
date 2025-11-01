@@ -28,82 +28,64 @@ export default function SkillsEducationCertifications() {
   }, [activeTab])
 
   const skillCategories = [
-  {
-    title: "Programming Languages",
-    icon: Code,
-    iconColor: "from-blue-500 to-purple-500",
-    skills: ["Python", "Java", "C", "PHP", "JavaScript"],
-  },
-  {
-    title: "Backend Development",
-    icon: Server,
-    iconColor: "from-green-500 to-teal-500",
-    skills: ["Node.js", "Express.js", "FastAPI", "API Development"],
-  },
-  {
-    title: "AI/ML & Deep Learning",
-    icon: Brain,
-    iconColor: "from-purple-500 to-pink-500",
-    skills: [
-      "TensorFlow",
-      "Keras", 
-      "PyTorch",
-      "3D CNNs",
-      "Transfer Learning",
-      "Scikit-learn"
-    ],
-  },
-  {
-    title: "Computer Vision & NLP",
-    icon: Eye,
-    iconColor: "from-orange-500 to-red-500",
-    skills: [
-      "OpenCV",
-      "NLTK",
-      "Computer Vision",
-      "Natural Language Processing",
-      "Sentence Transformers"
-    ],
-  },
-  {
-    title: "Frontend & UI Development",
-    icon: Monitor,
-    iconColor: "from-cyan-500 to-blue-500",
-    skills: ["HTML", "CSS", "JavaScript", "React", "Streamlit", "Tkinter"],
-  },
-  {
-    title: "Databases & Storage",
-    icon: Database,
-    iconColor: "from-indigo-500 to-purple-500",
-    skills: ["MySQL", "MongoDB", "FAISS Vector Search"],
-  },
-  {
-    title: "Development Tools",
-    icon: Wrench,
-    iconColor: "from-gray-500 to-slate-500",
-    skills: ["Git", "GitHub", "VS Code", "Jupyter Notebook", "Postman"],
-  },
-  {
-    title: "Automation & Testing",
-    icon: Cog,
-    iconColor: "from-yellow-500 to-orange-500",
-    skills: ["Selenium", "Web Automation", "API Testing"],
-  },
-  {
-    title: "Cloud & DevOps",
-    icon: Cloud,
-    iconColor: "from-sky-500 to-indigo-500",
-    skills: ["Docker", "Kubernetes", "Azure Document Intelligence"],
-  },
-  {
-    title: "Data Processing & Analysis",
-    icon: BarChart,
-    iconColor: "from-emerald-500 to-green-500",
-    skills: ["PyPDF2", "Data Structures & Algorithms", "TF-IDF", "Cross-Encoder Reranking"],
-  }
-];
-
-
+    {
+      title: "Programming Languages",
+      icon: Code,
+      iconColor: "from-blue-500 to-purple-500",
+      skills: ["Python", "Java", "JavaScript"],
+    },
+    {
+      title: "Frameworks & Libraries",
+      icon: Server,
+      iconColor: "from-green-500 to-teal-500",
+      skills: ["TensorFlow", "Keras", "PyTorch", "OpenCV", "NLTK", "Selenium", "Node.js", "Express.js", "React.js"],
+    },
+    {
+      title: "AI/ML & Deep Learning",
+      icon: Brain,
+      iconColor: "from-purple-500 to-pink-500",
+      skills: [
+        "3D CNNs",
+        "Transfer Learning", 
+        "NLP",
+        "Computer Vision",
+        "Generative AI",
+        "LangChain"
+      ],
+    },
+    {
+      title: "Tools & Technologies",
+      icon: Wrench,
+      iconColor: "from-orange-500 to-red-500",
+      skills: [
+        "Git",
+        "GitHub",
+        "VS Code",
+        "Jupyter",
+        "HTML",
+        "CSS",
+        "Postman (API Testing)"
+      ],
+    },
+    {
+      title: "Databases",
+      icon: Database,
+      iconColor: "from-indigo-500 to-purple-500",
+      skills: ["MySQL", "MongoDB"],
+    },
+    {
+      title: "Data Structures & Algorithms",
+      icon: BarChart,
+      iconColor: "from-emerald-500 to-green-500",
+      skills: ["Java", "Python"],
+    },
+    {
+      title: "Soft Skills",
+      icon: Cog,
+      iconColor: "from-yellow-500 to-orange-500",
+      skills: ["Analytical Problem-solving", "Teamwork", "Adaptability", "Time Management"],
+    }
+  ];
 
   const education = [
     {
@@ -138,16 +120,24 @@ export default function SkillsEducationCertifications() {
       name: "Data Structures and Algorithms using Java",
       issuer: "NPTEL",
       date: "Jul-Oct 2024",
-      score: "Completed",
+      score: "72%",
       description: "Completed a 12-week course covering arrays, trees, graphs, and algorithmic problem-solving.",
       link: "#",
     },
     {
-      name: "Kubernetes & Docker Fundamentals",
-      issuer: "Udemy",
-      date: "May 2025",
+      name: "Full Stack Web Development (Sigma 5.0)",
+      issuer: "Apna College",
+      date: "Ongoing",
+      score: "In Progress",
+      description: "Pursuing in-depth training in the MERN stack (MongoDB, Express, React, Node.js) and data structures using Java, covering frontend development, backend APIs, database integration, and algorithmic problem-solving.",
+      link: "#",
+    },
+    {
+      name: "MongoDB Developer Course",
+      issuer: "Infosys Springboard",
+      date: "Dec 2024",
       score: "Completed",
-      description: "4-hour course on Docker basics, Kubernetes orchestration, and hands-on labs.",
+      description: "Learned CRUD, indexing, aggregation, and NoSQL data modeling.",
       link: "#",
     },
     {
@@ -159,28 +149,11 @@ export default function SkillsEducationCertifications() {
       link: "#",
     },
     {
-      name: "MongoDB Developer Course",
-      issuer: "Infosys Springboard",
-      date: "Dec 2024",
-      score: "Completed",
-      description: "Learned CRUD operations, indexing, aggregation, and NoSQL data modeling.",
-      link: "#",
-    },
-    {
-      name: "WordPress Development",
-      issuer: "rtCamp",
+      name: "Kubernetes & Docker Fundamentals",
+      issuer: "Udemy",
       date: "Ongoing",
       score: "In Progress",
-      description: "Learning theme/plugin creation, WP-CLI, security, and PHP optimization.",
-      link: "#",
-    },
-    {
-      name: "Full Stack Web Development (Sigma 5.0)",
-      issuer: "Apna College",
-      date: "Ongoing",
-      score: "In Progress",
-      description:
-        "Pursuing in-depth training in the MERN stack (MongoDB, Express, React, Node.js) and data structures using Java, covering frontend development, backend APIs, database integration, and algorithmic problem-solving.",
+      description: "4-hour course on Docker basics, Kubernetes orchestration, and hands-on labs.",
       link: "#",
     },
   ]
@@ -319,6 +292,8 @@ export default function SkillsEducationCertifications() {
                         className={
                           cert.score === "In Progress"
                             ? "border-orange-500 text-orange-600 dark:border-orange-400 dark:text-orange-400"
+                            : cert.score.includes("%")
+                            ? "bg-blue-100 text-blue-800 dark:bg-blue-900/20 dark:text-blue-400"
                             : "bg-green-100 text-green-800 dark:bg-green-900/20 dark:text-green-400"
                         }
                       >
