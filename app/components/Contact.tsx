@@ -170,7 +170,10 @@ export default function Contact() {
                     className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-medium shadow-md hover:shadow-lg transition-all duration-300"
                     asChild
                   >
-                    <a href="/resume (19).pdf" download="Mohammed_Maaz_Resume.pdf">
+                    <a
+                      href="https://drive.google.com/uc?export=download&id=1readDBZY2jOwCgn4G0k8-8XT54janzOc"
+                      download="Mohammed_Maaz_Resume.pdf"
+                    >
                       <Download className="h-4 w-4 mr-1" />
                       Download Resume
                     </a>

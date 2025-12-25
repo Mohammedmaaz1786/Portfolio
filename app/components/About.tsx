@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useRef } from "react"
-import { Trophy, Zap, BookOpen, Users, Brain, Award } from "lucide-react"
+import { Trophy, Zap, BookOpen, Award } from "lucide-react"
 
 export default function About() {
   const sectionRef = useRef<HTMLElement>(null)
@@ -25,75 +25,86 @@ export default function About() {
   }, [])
 
   const highlights = [
-  {
-    icon: Trophy,
-    value: "9.35",
-    label: "Current CGPA",
-    description: "B.Tech CSE (AIML) - REVA University",
-    color: "from-purple-500 to-blue-500",
-  },
-  {
-    icon: Award,
-    value: "IEEE",
-    label: "Published Author",
-    description: "Road Rage Detection Research Paper",
-    color: "from-green-500 to-teal-500",
-  },
-  {
-    icon: Zap,
-    value: "6+",
-    label: "Major Projects",
-    description: "AI/ML, MERN Stack & Automation",
-    color: "from-orange-500 to-red-500",
-  },
-  {
-    icon: BookOpen,
-    value: "MERN & AI/ML",
-    label: "Tech Exploration", 
-    description: "Full-stack & AI skill growth",
-    color: "from-blue-500 to-indigo-500",
-  },
-];
-
+    {
+      icon: Trophy,
+      value: "9.35",
+      label: "Current CGPA",
+      description: "B.Tech CSE (AIML) - REVA University",
+      color: "from-purple-500 to-blue-500",
+    },
+    {
+      icon: Award,
+      value: "IEEE",
+      label: "Publication",
+      description: "Peer-reviewed research work",
+      color: "from-green-500 to-teal-500",
+    },
+    {
+      icon: Zap,
+      value: "6+",
+      label: "Projects",
+      description: "AI & Full-Stack Applications",
+      color: "from-orange-500 to-red-500",
+    },
+    {
+      icon: BookOpen,
+      value: "AI + MERN",
+      label: "Learning Focus",
+      description: "Applied AI & Web Development",
+      color: "from-blue-500 to-indigo-500",
+    },
+  ]
 
   return (
     <section id="about" ref={sectionRef} className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
+        {/* Section Header */}
         <div className="text-center mb-16 animate-on-scroll">
           <h2 className="text-4xl sm:text-5xl font-bold font-poppins mb-4">
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">About Me</span>
+            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              About Me
+            </span>
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-            Passionate about building intelligent solutions that bridge AI innovation with real-world applications
+            Exploring the intersection of artificial intelligence and full-stack software development
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+          {/* Journey */}
           <div className="animate-on-scroll">
             <div className="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300">
-              <h3 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">My Journey</h3>
+              <h3 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">
+                My Journey
+              </h3>
+
               <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
-                I'm currently pursuing my B.Tech in Computer Science Engineering with specialization in AI/ML at REVA University, Bengaluru, 
-                maintaining a strong academic record with a CGPA of 9.35. My journey into technology began with curiosity about how 
-                artificial intelligence can solve complex real-world problems.
+                I am currently pursuing a B.Tech in Computer Science Engineering with a specialization in
+                Artificial Intelligence and Machine Learning REVA University, Bengaluru. Over time, I have developed a strong interest
+                in building software systems that combine intelligent decision-making with robust application
+                design.
               </p>
+
               <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
-                As a published IEEE researcher, I've developed cutting-edge solutions including a road rage detection system with 94% accuracy, 
-                intelligent document processing systems using FAISS vector search, and full-stack applications with the MERN stack. 
-                My expertise spans from <span className="font-semibold text-blue-600 dark:text-blue-400">machine learning and AI frameworks</span> to 
-                <span className="font-semibold text-purple-600 dark:text-purple-400"> modern web development with React and Node.js</span>.
+                My experience includes working on <span className="font-semibold text-blue-600 dark:text-blue-400">
+                AI-enabled applications</span>, automation workflows, and full-stack web platforms.
+                I enjoy designing backend services, integrating intelligent features, and building clean,
+                responsive user interfaces using modern web technologies.
               </p>
 
               <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                When I'm not coding or working on AI models, you'll find me playing cricket, gaming, or exploring new technologies 
-                that can automate processes and enhance productivity. I believe in leveraging AI tools to streamline workflows 
-                and create innovative solutions for everyday challenges.
+                Beyond academics and projects, I actively explore new tools and frameworks that improve
+                developer productivity and system scalability. I am particularly interested in applying
+                AI techniques to enhance real-world software products and user experiences.
               </p>
             </div>
           </div>
 
+          {/* Highlights */}
           <div className="animate-on-scroll">
-            <h3 className="text-2xl font-bold mb-8 text-gray-900 dark:text-white">Key Highlights</h3>
+            <h3 className="text-2xl font-bold mb-8 text-gray-900 dark:text-white">
+              Key Highlights
+            </h3>
             <div className="grid grid-cols-2 gap-6">
               {highlights.map((highlight, index) => (
                 <div
@@ -108,39 +119,68 @@ export default function About() {
                       <highlight.icon className="h-6 w-6 text-white" />
                     </div>
                   </div>
-                  <div className="text-3xl font-bold text-purple-600 dark:text-purple-400 mb-1">{highlight.value}</div>
-                  <div className="text-lg font-semibold text-gray-900 dark:text-white mb-2">{highlight.label}</div>
-                  <div className="text-sm text-gray-500 dark:text-gray-400">{highlight.description}</div>
+                  <div className="text-3xl font-bold text-purple-600 dark:text-purple-400 mb-1">
+                    {highlight.value}
+                  </div>
+                  <div className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                    {highlight.label}
+                  </div>
+                  <div className="text-sm text-gray-500 dark:text-gray-400">
+                    {highlight.description}
+                  </div>
                 </div>
               ))}
             </div>
           </div>
         </div>
 
-        {/* Technical Skills Preview */}
+        {/* Skills Preview */}
         <div className="animate-on-scroll">
           <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-2xl p-8">
-            <h3 className="text-2xl font-bold mb-6 text-center text-gray-900 dark:text-white">Technical Expertise</h3>
+            <h3 className="text-2xl font-bold mb-6 text-center text-gray-900 dark:text-white">
+              Technical Focus Areas
+            </h3>
+
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
               <div className="space-y-2">
-                <div className="font-semibold text-blue-600 dark:text-blue-400">Languages</div>
-                <div className="text-sm text-gray-600 dark:text-gray-300">Python, Java, JavaScript</div>
+                <div className="font-semibold text-blue-600 dark:text-blue-400">
+                  Programming
+                </div>
+                <div className="text-sm text-gray-600 dark:text-gray-300">
+                  Python, Java, JavaScript
+                </div>
               </div>
+
               <div className="space-y-2">
-                <div className="font-semibold text-purple-600 dark:text-purple-400">AI/ML</div>
-                <div className="text-sm text-gray-600 dark:text-gray-300">TensorFlow, PyTorch, OpenCV</div>
+                <div className="font-semibold text-purple-600 dark:text-purple-400">
+                  AI & ML
+                </div>
+                <div className="text-sm text-gray-600 dark:text-gray-300">
+                  Machine Learning, Deep Learning, NLP
+                </div>
               </div>
+
               <div className="space-y-2">
-                <div className="font-semibold text-green-600 dark:text-green-400">Web Stack</div>
-                <div className="text-sm text-gray-600 dark:text-gray-300">MERN, Next.js, FastAPI</div>
+                <div className="font-semibold text-green-600 dark:text-green-400">
+                  Full Stack
+                </div>
+                <div className="text-sm text-gray-600 dark:text-gray-300">
+                  MERN Stack, REST APIs
+                </div>
               </div>
+
               <div className="space-y-2">
-                <div className="font-semibold text-orange-600 dark:text-orange-400">Tools</div>
-                <div className="text-sm text-gray-600 dark:text-gray-300">Git, Docker, Postman</div>
+                <div className="font-semibold text-orange-600 dark:text-orange-400">
+                  Tools
+                </div>
+                <div className="text-sm text-gray-600 dark:text-gray-300">
+                  Git, Docker, Cloud Platforms
+                </div>
               </div>
             </div>
           </div>
         </div>
+
       </div>
     </section>
   )

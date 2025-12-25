@@ -28,64 +28,83 @@ export default function SkillsEducationCertifications() {
   }, [activeTab])
 
   const skillCategories = [
-    {
-      title: "Programming Languages",
-      icon: Code,
-      iconColor: "from-blue-500 to-purple-500",
-      skills: ["Python", "Java", "JavaScript"],
-    },
-    {
-      title: "Frameworks & Libraries",
-      icon: Server,
-      iconColor: "from-green-500 to-teal-500",
-      skills: ["TensorFlow", "Keras", "PyTorch", "OpenCV", "NLTK", "Selenium", "Node.js", "Express.js", "React.js"],
-    },
-    {
-      title: "AI/ML & Deep Learning",
-      icon: Brain,
-      iconColor: "from-purple-500 to-pink-500",
-      skills: [
-        "3D CNNs",
-        "Transfer Learning", 
-        "NLP",
-        "Computer Vision",
-        "Generative AI",
-        "LangChain"
-      ],
-    },
-    {
-      title: "Tools & Technologies",
-      icon: Wrench,
-      iconColor: "from-orange-500 to-red-500",
-      skills: [
-        "Git",
-        "GitHub",
-        "VS Code",
-        "Jupyter",
-        "HTML",
-        "CSS",
-        "Postman (API Testing)"
-      ],
-    },
-    {
-      title: "Databases",
-      icon: Database,
-      iconColor: "from-indigo-500 to-purple-500",
-      skills: ["MySQL", "MongoDB"],
-    },
-    {
-      title: "Data Structures & Algorithms",
-      icon: BarChart,
-      iconColor: "from-emerald-500 to-green-500",
-      skills: ["Java", "Python"],
-    },
-    {
-      title: "Soft Skills",
-      icon: Cog,
-      iconColor: "from-yellow-500 to-orange-500",
-      skills: ["Analytical Problem-solving", "Teamwork", "Adaptability", "Time Management"],
-    }
-  ];
+  {
+    title: "Programming Languages",
+    icon: Code,
+    iconColor: "from-blue-500 to-purple-500",
+    skills: ["Python", "Java", "JavaScript"],
+  },
+  {
+    title: "Web & Backend Frameworks",
+    icon: Server,
+    iconColor: "from-green-500 to-teal-500",
+    skills: [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "REST APIs",
+      "Frontend & Backend Development",
+    ],
+  },
+  {
+    title: "AI & Machine Learning",
+    icon: Brain,
+    iconColor: "from-purple-500 to-pink-500",
+    skills: [
+      "Machine Learning",
+      "Deep Learning",
+      "Natural Language Processing",
+      "Computer Vision",
+      "Generative AI",
+    ],
+  },
+  {
+    title: "Tools & Technologies",
+    icon: Wrench,
+    iconColor: "from-orange-500 to-red-500",
+    skills: [
+      "Git",
+      "GitHub",
+      "VS Code",
+      "Postman",
+      "Docker (Basics)",
+      "HTML",
+      "CSS",
+    ],
+  },
+  {
+    title: "Databases",
+    icon: Database,
+    iconColor: "from-indigo-500 to-purple-500",
+    skills: [
+      "MySQL",
+      "MongoDB",
+      "Database Design Fundamentals",
+    ],
+  },
+  {
+    title: "Data Structures & Problem Solving",
+    icon: BarChart,
+    iconColor: "from-emerald-500 to-green-500",
+    skills: [
+      "Data Structures",
+      "Algorithms",
+      "Problem Solving with Java & Python",
+    ],
+  },
+  {
+    title: "Professional Skills",
+    icon: Cog,
+    iconColor: "from-yellow-500 to-orange-500",
+    skills: [
+      "Analytical Thinking",
+      "Team Collaboration",
+      "Adaptability",
+      "Time Management",
+    ],
+  },
+];
+
 
   const education = [
     {

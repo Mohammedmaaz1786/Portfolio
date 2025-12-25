@@ -11,14 +11,12 @@ export default function Hero() {
 
   const roles = [
     "Undergraduate Software Developer",
-    "AI/ML Enthusiast",
+    "AI & Machine Learning Enthusiast",
     "MERN Stack Developer",
-    "Deep Learning Learner",
-    "Published Research Author",
-    "Aspiring Data Scientist",
-  ];
-
-
+    "Full Stack Web Developer",
+    "AI-Driven Application Builder",
+    "Software Engineering Learner",
+  ]
 
   useEffect(() => {
     const currentRole = roles[currentRoleIndex]
@@ -32,7 +30,11 @@ export default function Hero() {
         setIsDeleting(false)
         setCurrentRoleIndex((prev) => (prev + 1) % roles.length)
       } else {
-        setDisplayText((prev) => (isDeleting ? prev.slice(0, -1) : currentRole.slice(0, prev.length + 1)))
+        setDisplayText((prev) =>
+          isDeleting
+            ? prev.slice(0, -1)
+            : currentRole.slice(0, prev.length + 1)
+        )
       }
     }, typingSpeed)
 
@@ -54,8 +56,11 @@ export default function Hero() {
   }
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
-      {/* Simplified Background */}
+    <section
+      id="home"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16"
+    >
+      {/* Background */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-400/10 via-purple-400/10 to-pink-400/10 dark:from-blue-600/10 dark:via-purple-600/10 dark:to-pink-600/10"></div>
       </div>
@@ -79,25 +84,15 @@ export default function Hero() {
             </h1>
 
             <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
-              Passionate Computer Science Engineering student building intelligent systems with deep learning and innovative automation, 
-              while mastering full-stack web development with the MERN stack. <span className="font-semibold text-gray-800 dark:text-gray-200">IEEE published author</span> enthusiastic 
-              about transforming complex problems into elegant AI solutions and creating impactful, user-friendly applications that make a difference.
+              Computer Science undergraduate focused on building{" "}
+              <span className="font-semibold text-gray-800 dark:text-gray-200">
+                AI-enabled, full-stack web applications
+              </span>{" "}
+              using modern frontend frameworks and scalable backend systems.
+              Interested in developing intelligent features, secure APIs, and
+              user-centric products by combining applied machine learning with
+              strong software engineering practices.
             </p>
-
-
-            
-            {/* Key Achievements Highlight */}
-            {/* <div className="flex flex-wrap justify-center gap-3 text-sm">
-              <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded-full font-medium">
-                🎯 94% ML Model Accuracy
-              </span>
-              <span className="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-300 rounded-full font-medium">
-                📚 IEEE Published Paper
-              </span>
-              <span className="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 rounded-full font-medium">
-                🏆 9.35 CGPA
-              </span>
-            </div> */}
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -106,9 +101,9 @@ export default function Hero() {
               className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
               asChild
             >
-              <a 
-                href="https://drive.google.com/file/d/1VjcgcKfDenEoNKkXyF7iWRa7rXfwXuDV/view?usp=sharing" 
-                target="_blank" 
+              <a
+                href="https://drive.google.com/file/d/1readDBZY2jOwCgn4G0k8-8XT54janzOc/view?usp=drive_link"
+                target="_blank"
                 rel="noopener noreferrer"
               >
                 <ExternalLink className="mr-2 h-4 w-4" />

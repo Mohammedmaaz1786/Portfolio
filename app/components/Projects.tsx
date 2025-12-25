@@ -26,107 +26,168 @@ export default function Projects() {
 
     return () => observer.disconnect()
   }, [activeFilter])
-
   const projects = [
     {
       title: "Road Rage Detection using Deep Learning and Computer Vision",
       description:
-        "Real-time road rage detection system using 3D CNNs with 5-frame temporal smoothing, achieving 94% accuracy on a custom Indian dataset.",
+        "Real-time road rage detection system using 3D CNNs with temporal modeling for aggressive behavior recognition in traffic scenarios.",
       longDescription:
-        "Reduced false positives by 15% through transfer learning, optimized for Bangalore traffic conditions. Deployed for traffic monitoring and insurance claim verification.",
+        "Designed and trained a deep learning pipeline optimized for Indian traffic conditions and validated through extensive experimentation.",
       technologies: ["Python", "TensorFlow", "Keras", "OpenCV", "3D CNN", "Transfer Learning"],
       date: "Dec 2024",
       status: "Completed",
       category: "AI/ML",
       labels: ["Featured", "Published in IEEE"],
-      achievements: ["94% Accuracy", "IEEE Publication", "15% False Positive Reduction"],
+      achievements: ["IEEE Publication", "Real-time Detection"],
       github: "https://github.com/Mohammedmaaz1786/Road-Rage-Detection",
       demo: "https://ieeexplore.ieee.org/document/10968328",
-      demoVideo: "#",
       gradient: "from-red-500 to-orange-500",
+    },
+    {
+      title: "EduQueryAI – RAG-Based Learning Assistant",
+      description:
+        "AI-powered learning assistant enabling document-grounded question answering, quiz generation, and weak-topic analysis for students.",
+      longDescription:
+        "Implemented a complete Retrieval-Augmented Generation (RAG) pipeline with vector search, secure authentication, and analytics-driven learning insights.",
+      technologies: [
+        "Node.js",
+        "Express.js",
+        "React.js",
+        "MongoDB",
+        "Azure Cosmos DB",
+        "Azure OpenAI Embeddings",
+        "Google Gemini API",
+        "JWT",
+      ],
+      date: "Dec 2025",
+      status: "Completed",
+      category: "AI/ML",
+      labels: ["Featured"],
+      achievements: ["RAG Pipeline", "Quiz Generation", "Learning Analytics"],
+      github: "https://eduqueryai.vercel.app/",
+      demo: "https://eduqueryai.vercel.app/",
+      gradient: "from-blue-500 to-indigo-500",
     },
     {
       title: "Intelligent Policy Document Query System (HackRx 2025)",
       description:
-        "State-of-the-art intelligent query system enabling accurate extraction and analysis of insurance policy documents (16+ pages) built for HackRx competition.",
+        "Intelligent document query system for extracting and analyzing large insurance policy documents using hybrid text extraction.",
       longDescription:
-        "Hybrid document processing pipeline with PyPDF2 primary extraction and Azure OCR backup, improving coverage from 12.5% to 100%.",
-      technologies: ["Python", "FastAPI", "FAISS", "Azure Document Intelligence", "PyPDF2", "Sentence Transformers", "Gemini API"],
+        "Combined PDF parsing and OCR-based extraction with vector search to improve retrieval accuracy and backend scalability.",
+      technologies: [
+        "Python",
+        "FastAPI",
+        "FAISS",
+        "Azure Document Intelligence",
+        "PyPDF2",
+        "Sentence Transformers",
+        "Gemini API",
+      ],
       date: "Aug 2025",
       status: "Completed",
       category: "AI/ML",
       labels: ["Featured", "HackRx Competition"],
-      achievements: ["100% Document Coverage", "60% Better Context Relevance", "Secure FastAPI Backend"],
+      achievements: ["Hybrid Extraction", "Secure API Backend"],
       github: "https://github.com/Mohammedmaaz1786/hackrx_query_system",
       demo: "#",
-      demoVideo: "#",
       gradient: "from-purple-500 to-indigo-500",
     },
     {
       title: "AI-powered LinkedIn Automation Tool",
       description:
-        "Tkinter-based automation system for LinkedIn enabling personalized connection requests, messaging, and auto-posting with user-friendly interface.",
-      longDescription: "Employs Gemini-powered NLP for intelligent, context-aware messaging and hashtag generation with compliance-focused design.",
+        "Desktop-based automation tool enabling personalized LinkedIn outreach, messaging, and content workflows.",
+      longDescription:
+        "Built with compliance-focused automation patterns, NLP-driven message generation, and modular execution controls.",
       technologies: ["Python", "Selenium", "Gemini API", "NLP", "HTML Parsing", "Tkinter"],
       date: "May 2025",
       status: "Completed",
       category: "Automation",
       labels: ["Featured"],
-      achievements: ["Smart Targeting", "NLP Integration", "Human-like Interaction Delays"],
+      achievements: ["Personalized Messaging", "Automation Framework"],
       github: "https://github.com/Mohammedmaaz1786/LinkedIn_Automator",
       demo: "#",
-      demoVideo: "#",
       gradient: "from-blue-500 to-purple-500",
     },
     {
-      title: "Audit Lens - Intelligent Invoice Processing System",
+      title: "AI-Enabled Campus Event Management Platform",
       description:
-        "Full-stack intelligent auditing system for invoice processing and fraud detection with AI-powered OCR and ML-based anomaly detection.",
+        "Role-based campus event management system supporting event creation, approvals, registrations, and attendance tracking.",
       longDescription:
-        "Integrates multi-language document parsing (English, Spanish, French) using Tesseract + Gemini 2.0 Flash with Next.js dashboard.",
-      technologies: ["Next.js", "FastAPI", "Python", "TypeScript", "Tailwind CSS", "Google Gemini AI", "Scikit-learn", "OpenCV"],
+        "Integrated AI-assisted event creation, QR-based verification, and secure role-based access control across student and organizer portals.",
+      technologies: [
+        "React.js",
+        "Tailwind CSS",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "JWT",
+        "Gemini AI",
+        "QR Code",
+      ],
+      date: "Dec 2025",
+      status: "Completed",
+      category: "Full-Stack",
+      labels: ["Featured"],
+      achievements: ["Role-Based Access", "QR Attendance", "AI Assistance"],
+      github: "https://ai-enabled-campus-event-management.vercel.app/",
+      demo: "#",
+      gradient: "from-teal-500 to-green-500",
+    },
+    {
+      title: "Audit Lens – Intelligent Invoice Processing System",
+      description:
+        "Full-stack intelligent auditing system for invoice processing and fraud detection with AI-powered OCR.",
+      longDescription:
+        "Developed a scalable backend and dashboard for document parsing, anomaly detection, and audit insights.",
+      technologies: [
+        "Next.js",
+        "FastAPI",
+        "Python",
+        "TypeScript",
+        "Tailwind CSS",
+        "Google Gemini AI",
+        "Scikit-learn",
+        "OpenCV",
+      ],
       date: "Under Development",
       status: "In Development",
       category: "Full-Stack",
       labels: ["Featured"],
-      achievements: ["Multi-language OCR", "ML Fraud Detection", "Real-time Analytics"],
+      achievements: ["OCR Integration", "Fraud Detection"],
       github: "https://github.com/Mohammedmaaz1786/AuditLens",
       demo: "#",
-      demoVideo: "#",
       gradient: "from-indigo-500 to-purple-500",
     },
     {
       title: "Wanderlust – Hotel/Accommodation Booking Platform",
       description:
-        "Full-stack accommodation booking system (Airbnb Clone) where users can register, log in, and browse available hotels with interactive features.",
+        "Full-stack accommodation booking platform with authentication, media handling, and interactive maps.",
       longDescription:
-        "Implemented JWT authentication, Cloudinary image management, and interactive maps using Mapbox API.",
+        "Implemented secure user authentication, cloud-based image management, and location-based browsing features.",
       technologies: ["MERN Stack", "Mapbox API", "Cloudinary", "JWT Authentication"],
       date: "Under Development",
       status: "In Development",
       category: "Full-Stack",
       labels: ["Featured"],
-      achievements: ["JWT Authentication", "Image Management", "Interactive Maps"],
+      achievements: ["Authentication", "Map Integration"],
       github: "https://github.com/Mohammedmaaz1786/Wanderlust",
       demo: "#",
-      demoVideo: "#",
       gradient: "from-green-500 to-teal-500",
     },
     {
       title: "Amazon Review Sentiment Analyzer",
       description:
-        "Streamlit-based sentiment analysis tool for Amazon reviews using TF-IDF and Random Forest classifier.",
+        "Sentiment analysis application for classifying Amazon product reviews using machine learning.",
       longDescription:
-        "Implemented NLTK preprocessing (tokenization, stop words, lemmatization) for accurate real-time prediction.",
+        "Built an interactive UI with text preprocessing and real-time sentiment prediction.",
       technologies: ["Python", "Streamlit", "Scikit-learn", "NLTK", "TF-IDF", "Random Forest"],
       date: "Apr 2025",
       status: "Completed",
       category: "NLP",
       labels: [],
-      achievements: ["Real-time Analysis", "Advanced Preprocessing", "Interactive UI"],
+      achievements: ["Text Preprocessing", "ML Classification"],
       github: "https://github.com/Mohammedmaaz1786/Sentiment_Analysis",
       demo: "#",
-      demoVideo: "#",
       gradient: "from-cyan-500 to-blue-500",
     },
   ]
@@ -139,9 +200,10 @@ export default function Projects() {
     { id: "NLP", label: "NLP" },
   ]
 
-  const filteredProjects = activeFilter === "all" 
-    ? projects.filter(project => project.labels.includes("Featured")) // Only show featured projects in "All"
-    : projects.filter((project) => project.category === activeFilter)
+  const filteredProjects =
+    activeFilter === "all"
+      ? projects.filter((project) => project.labels.includes("Featured"))
+      : projects.filter((project) => project.category === activeFilter)
 
   return (
     <section id="projects" ref={sectionRef} className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-slate-800/50">
@@ -270,8 +332,12 @@ export default function Projects() {
                     asChild
                   >
                     <a href={project.github} target="_blank" rel="noopener noreferrer">
-                      <Github className="w-4 h-4 mr-1" />
-                      Code
+                      {project.github?.includes("github.com") ? (
+                        <Github className="w-4 h-4 mr-1" />
+                      ) : (
+                        <ExternalLink className="w-4 h-4 mr-1" />
+                      )}
+                      {project.github?.includes("github.com") ? "Code" : "Website"}
                     </a>
                   </Button>
                   {project.demo !== "#" && project.labels.includes("Published in IEEE") && (
